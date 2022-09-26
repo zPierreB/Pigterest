@@ -18,12 +18,12 @@ export const getPictureById = (req, res) => {
 
     sequelize.sync().then(() => {
         try {
-            const pictures = Picture.findAll({
+            const pictures = Picture.findOne({
                 where: {
                     id: req.params.id
                 }
             });
-            res.json(pictures[0]);
+            res.json(pictures);
         } catch(error) {
             res.json({ message: error.message });
         }
@@ -52,6 +52,22 @@ export const updatePicture = (req, res) => {
                 }
             });
             res.json({"message": "Picture updated"});
+        } catch(error) {
+            res.json({ message: error.message });
+        }
+    })
+}
+
+export const deletePicture = (req, res) => {
+
+    sequelize.sync().then(() => {
+        try {
+            Picture.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.json({"message": "Picture deleted"});
         } catch(error) {
             res.json({ message: error.message });
         }
