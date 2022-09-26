@@ -13,8 +13,9 @@ const Picture = sequelize.define("pictures", {
         allowNull: false
     },
     user_id: {
-        type :DataTypes.INTEGER,
-        allowNull: false
+        type :DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true
     }
 }, {
     freezeTableName: true
