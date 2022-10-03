@@ -2,16 +2,14 @@ import Picture from "../models/picture.model.js";
 
 import sequelize from "../config/db.js";
 
-export const getAllPictures = (req, res) => {
+export const getAllPictures = async (req, res) => {
     
-    sequelize.sync().then(() => {
-        try {
-            const pictures = Picture.findAll();
-            res.json(pictures);
-        } catch(error) {
-            res.json({ message: error.message });
-        }
-    })
+    try {
+        const pictures =  await Picture.findAll();
+        res.json(pictures);
+    } catch(error) {
+        res.json({ message: error.message });
+    }
 }
 
 export const getPictureById = (req, res) => {

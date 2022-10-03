@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from "sequelize";
 import sequelize from "../config/db";
 
-const { DataTypes } = Sequelize;
+// const { DataTypes } = Sequelize;
 
 const User = sequelize.define("user", {
     username: {

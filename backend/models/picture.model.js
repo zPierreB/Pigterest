@@ -1,5 +1,5 @@
-import { Sequelize, DataTypes } from "sequelize";
-import sequelize from "../config/db";
+import { Sequelize } from "sequelize";
+import sequelize from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 

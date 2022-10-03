@@ -1,0 +1,15 @@
+.picturesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    max-width: 1380px;
+    align-items: start;
+}
+
+.onePicContainer {
+    row-gap: 30px;
+}
+
+.onePic {
+    width: 100%;
+}

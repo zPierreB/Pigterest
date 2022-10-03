@@ -6,7 +6,7 @@ import {
     createPicture,
     updatePicture,
     deletePicture
-} from '../controller/picture.controller.js';
+} from '../controllers/picture.controller.js';
 
 const router = express.Router();
 
