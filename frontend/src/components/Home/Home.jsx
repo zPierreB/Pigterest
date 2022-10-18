@@ -17,6 +17,12 @@ const Home = () => {
         setPictures(response.data);
     }
 
+    // const getPictures = async() => {
+    //     const response = await fetch('http://localhost:5000/pictures');
+    //     const data = await response.json();
+    //     setPictures(data);
+    // }
+
     return (
         <div>
             <Header />

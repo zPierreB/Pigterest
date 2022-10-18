@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
-import sequelize from "../config/db.js";
+import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
 
-const Picture = sequelize.define("pictures", {
+const Picture = db.define("pictures", {
     alt: {
         type: DataTypes.STRING,
         allowNull: false
